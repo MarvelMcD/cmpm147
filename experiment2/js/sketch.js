@@ -22,14 +22,16 @@ function resizeScreen() {
   resizeCanvas(canvasContainer.width(), canvasContainer.height());
   // redrawCanvas(); // Redraw everything based on new size
 }
-function setup() {  
-  canvasContainer = $("#canvas-container");
-  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
-  canvas.parent("canvas-container");
-  $(window).resize(function() {
-    resizeScreen();
+function setup() {
+  frameRate(120);
+  canvasContainer = select("#canvas-container");
+  let canvas = createCanvas(canvasContainer.width, canvasContainer.height);
+  canvas.parent(canvasContainer);
+  $("#clicker").click(() => {
+      seed++;
+      redraw();
   });
-  resizeScreen();
+  loop(); 
 }
 
 
