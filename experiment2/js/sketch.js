@@ -9,11 +9,24 @@
 // In a longer project I like to put these in a separate file
 
 
+const VALUE1 = 1;
+const VALUE2 = 2;
+
 // Globals
 let myInstance;
 let canvasContainer;
 var centerHorz, centerVert;
 
+class MyClass {
+    constructor(param1, param2) {
+        this.property1 = param1;
+        this.property2 = param2;
+    }
+
+    myMethod() {
+        // code to run when method is called
+    }
+}
 
 function resizeScreen() {
   centerHorz = canvasContainer.width() / 2; // Adjusted for drawing logic
@@ -22,6 +35,7 @@ function resizeScreen() {
   resizeCanvas(canvasContainer.width(), canvasContainer.height());
   // redrawCanvas(); // Redraw everything based on new size
 }
+
 function setup() {
   //frameRate(120);
   createCanvas(400, 200);
