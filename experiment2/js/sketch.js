@@ -46,10 +46,10 @@ const sunCoreCore = "#fff3ad";
 const sunOuterColor = "#e9511e";
 const waveColor = "#437d6c";
 
-function setup() {
-  createCanvas(400, 200);
-  createButton("reimagine").mousePressed(() => seed++);
-}
+// function setup() {
+//   createCanvas(400, 200);
+//   createButton("reimagine").mousePressed(() => seed++);
+// }
 
 function draw() {
   randomSeed(seed);
