@@ -39,9 +39,9 @@ function resizeScreen() {
 function setup() {
   //frameRate(120);
   createCanvas(400, 200);
-  canvasContainer = select("#canvas-container");
-  let canvas = createCanvas(canvasContainer.width, canvasContainer.height);
-  canvas.parent(canvasContainer);
+  canvasContainer = $("#canvas-container");
+  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+  canvas.parent("canvas-container");
   $("#clicker").click(() => {
       seed++;
       redraw();
