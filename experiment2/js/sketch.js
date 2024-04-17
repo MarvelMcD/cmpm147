@@ -36,6 +36,10 @@ function resizeScreen() {
   // redrawCanvas(); // Redraw everything based on new size
 }
 
+$("#reimagine").click(function() {
+  seed++;
+});
+
 function setup() {
   //frameRate(120);
   createCanvas(400, 200);
