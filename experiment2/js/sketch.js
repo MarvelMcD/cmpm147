@@ -23,7 +23,8 @@ function resizeScreen() {
   // redrawCanvas(); // Redraw everything based on new size
 }
 function setup() {
-  frameRate(120);
+  //frameRate(120);
+  createCanvas(400, 200);
   canvasContainer = select("#canvas-container");
   let canvas = createCanvas(canvasContainer.width, canvasContainer.height);
   canvas.parent(canvasContainer);
@@ -31,7 +32,7 @@ function setup() {
       seed++;
       redraw();
   });
-  loop(); 
+  //loop(); 
 }
 
 
@@ -46,11 +47,10 @@ const sunCoreCore = "#fff3ad";
 const sunOuterColor = "#e9511e";
 const waveColor = "#437d6c";
 
-// function setup() {
-//   createCanvas(400, 200);
-//   createButton("reimagine").mousePressed(() => seed++);
-// }
-
+ //function setup() {
+ //  createCanvas(400, 200);
+ //   createButton("reimagine").mousePressed(() => seed++);
+ //}
 function draw() {
   randomSeed(seed);
 
